@@ -47,10 +47,13 @@ def cleaned_text(text):
     #
     # text = ''.join(cleaned_text)
     chars_unique = set(text)
-    print(chars_unique)
+    print(sorted(chars_unique))
     for c in chars_unique:
         if c not in list(ascii_lowercase) and c not in punctuation:
-            text.replace(c, ' ')
+            print(c)
+            text = text.replace(c, ' ')
+
+    print(sorted(set(text)))
 
     return text
 
